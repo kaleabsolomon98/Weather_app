@@ -1,5 +1,7 @@
+// flutter imports
 import 'package:flutter/material.dart';
 
+// project imports
 import '../../weather_bloc/weather_bloc.dart';
 import 'data_page_widgets_regular/data_page_content.dart';
 import 'data_page_widgets_simplified/data_page_content_simplified.dart';
