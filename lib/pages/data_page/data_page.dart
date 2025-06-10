@@ -1,5 +1,10 @@
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// project imports
 import '../../weather_bloc/weather_bloc.dart';
 import 'data_page_widgets_regular/network_error_content.dart';
 import 'data_page_widgets_regular/not_found_content.dart';
@@ -23,9 +28,7 @@ class _DataPageState extends State<DataPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    BlocProvider.of<WeatherBloc>(context).add(
-      GetWeatherData(widget.cityName),
-    );
+    BlocProvider.of<WeatherBloc>(context).add(GetWeatherData(widget.cityName));
   }
 
   @override
@@ -48,9 +51,7 @@ class _DataPageState extends State<DataPage> {
             } else if (state is ErrorState) {
               return const NetworkErrorContent();
             } else if (state is NotFoundState) {
-              return NotFoundContent(
-                cityname: widget.cityName,
-              );
+              return NotFoundContent(cityname: widget.cityName);
             }
             return const Placeholder();
           },
