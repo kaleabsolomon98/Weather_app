@@ -1,5 +1,7 @@
+// fluitter imports
 import 'package:flutter/material.dart';
 
+// project imports
 import '../../../weather_bloc/weather_bloc.dart';
 import '../data_page_widgets_simplified/HumiditySimplified.dart';
 import '../data_page_widgets_simplified/VisibilitySimplified.dart';
