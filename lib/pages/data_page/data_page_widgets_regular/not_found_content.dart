@@ -1,11 +1,11 @@
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
 import 'weather_data_back_button.dart';
 
 class NotFoundContent extends StatelessWidget {
-  const NotFoundContent({
-    super.key,
-    required this.cityname,
-  });
+  const NotFoundContent({super.key, required this.cityname});
 
   final String cityname;
 
@@ -18,29 +18,19 @@ class NotFoundContent extends StatelessWidget {
           'assets/cloud_magnifying_glass.png',
           width: MediaQuery.of(context).size.width / 2,
         ),
-        const SizedBox(
-          height: 30,
-        ),
+        const SizedBox(height: 30),
         const Text(
           "Unfortunately \nWe couldn't find city",
           textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 20,
-          ),
+          style: TextStyle(fontSize: 20),
         ),
-        const SizedBox(
-          height: 10,
-        ),
+        const SizedBox(height: 10),
         Text(
           cityname,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 25,
-          ),
+          style: const TextStyle(fontSize: 25),
         ),
-        const SizedBox(
-          height: 40,
-        ),
+        const SizedBox(height: 40),
         const WeatherDataBackButton(),
       ],
     );
