@@ -1,4 +1,7 @@
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 
 class IconDegreeBanner extends StatelessWidget {
@@ -14,9 +17,7 @@ class IconDegreeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: const BoxConstraints(
-        maxWidth: 400,
-      ),
+      constraints: const BoxConstraints(maxWidth: 400),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
@@ -34,18 +35,12 @@ class IconDegreeBanner extends StatelessWidget {
                 ),
               ),
             ),
-            const Expanded(
-              flex: 1,
-              child: SizedBox(),
-            ),
+            const Expanded(flex: 1, child: SizedBox()),
             Expanded(
               flex: 4,
               child: FittedBox(
                 fit: BoxFit.fitWidth,
-                child: Text(
-                  "$temperature°C",
-                  textAlign: TextAlign.center,
-                ),
+                child: Text("$temperature°C", textAlign: TextAlign.center),
               ),
             ),
           ],
