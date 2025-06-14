@@ -1,5 +1,10 @@
-import 'package:auto_size_text/auto_size_text.dart';
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
+import 'package:auto_size_text/auto_size_text.dart';
+
+// project imports
 import 'city_form_field.dart';
 
 class SearchPageContentSimplified extends StatelessWidget {
@@ -16,9 +21,7 @@ class SearchPageContentSimplified extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(
-            height: 100,
-          ),
+          const SizedBox(height: 100),
           const AutoSizeText(
             'Search Weather',
             textAlign: TextAlign.center,
@@ -26,16 +29,9 @@ class SearchPageContentSimplified extends StatelessWidget {
             minFontSize: 20,
             maxLines: 2,
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          CityFormField(
-            searchController: searchController,
-            textFontSize: 30,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 20),
+          CityFormField(searchController: searchController, textFontSize: 30),
+          const SizedBox(height: 20),
         ],
       ),
     );
