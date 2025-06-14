@@ -1,7 +1,8 @@
+// flutter imports
 import 'package:flutter/material.dart';
 
+// project imports
 import '../../services/shared_prefs.dart';
-import '../settings_page/settings_page.dart';
 import 'search_page_widgets/search_page_content_regular.dart';
 import 'search_page_widgets/search_page_content_simplified.dart';
 
