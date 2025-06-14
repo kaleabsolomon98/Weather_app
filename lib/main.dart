@@ -1,6 +1,11 @@
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// project imports
 import 'pages/search_page/search_page.dart';
 import 'services/shared_prefs.dart';
 import 'weather_bloc/weather_bloc.dart';
