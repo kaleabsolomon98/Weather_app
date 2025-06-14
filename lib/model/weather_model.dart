@@ -1,4 +1,4 @@
-class WeatherModel{
+class WeatherModel {
   final double temperature;
   final int pressure;
   final String description;
@@ -25,7 +25,6 @@ class WeatherModel{
 
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
     final main = json['main'];
-    //final wind = json['wind'];
     final weather = json['weather'][0];
     final sys = json['sys'];
 
@@ -35,13 +34,19 @@ class WeatherModel{
       description: weather['description'],
       icon: weather['icon'],
       date: DateTime.now(),
-      sunrise: DateTime.fromMillisecondsSinceEpoch(sys['sunrise'] * 1000, isUtc: true).toLocal(),
-      sunset: DateTime.fromMillisecondsSinceEpoch(sys['sunset'] * 1000, isUtc: true).toLocal(),
+      sunrise: DateTime.fromMillisecondsSinceEpoch(
+        sys['sunrise'] * 1000,
+        isUtc: true,
+      ).toLocal(),
+      sunset: DateTime.fromMillisecondsSinceEpoch(
+        sys['sunset'] * 1000,
+        isUtc: true,
+      ).toLocal(),
       humidity: main['humidity'],
       visibility: json['visibility'],
       speed: json['wind']['speed'].toDouble(),
       //speed: wind['speed']
-       // speed: double.parse((wind['speed']).toString()),
+      // speed: double.parse((wind['speed']).toString()),
     );
   }
 }
