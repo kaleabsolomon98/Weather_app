@@ -1,5 +1,8 @@
-import 'package:auto_size_text/auto_size_text.dart';
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:intl/intl.dart';
 
 class PlaceDataTimeInformationSimplified extends StatelessWidget {
