@@ -1,5 +1,8 @@
+// package imports
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// project imports
 import '../exceptions/network_exception.dart';
 import '../exceptions/not_found_exception.dart';
 import '../model/weather_model.dart';
