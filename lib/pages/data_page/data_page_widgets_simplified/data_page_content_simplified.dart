@@ -1,6 +1,10 @@
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
 import 'package:flutter_gradients_reborn/flutter_gradients_reborn.dart';
 
+// project imports
 import '../../../weather_bloc/weather_bloc.dart';
 import 'HumiditySimplified.dart';
 import 'VisibilitySimplified.dart';
@@ -35,9 +39,7 @@ class DataPageContentSimplified extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 60,
-            ),
+            const SizedBox(height: 60),
             PlaceDataTimeInformationSimplified(
               cityName: cityName,
               date: state.weatherModel.date,
@@ -53,30 +55,20 @@ class DataPageContentSimplified extends StatelessWidget {
                 height: 200,
               ),
             ),
-            TemperatureSimplify(
-              temperature: state.weatherModel.temperature,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
+            TemperatureSimplify(temperature: state.weatherModel.temperature),
+            const SizedBox(height: 20),
             WeatherDescriptionSimplified(
               description: state.weatherModel.description,
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             PressureInformationSimplified(
               pressure: state.weatherModel.pressure,
             ),
             WindSpeedSimplefied(speed: state.weatherModel.speed),
-            const SizedBox(
-              height: 40,
-            ),
+            const SizedBox(height: 40),
             HumiditySimplified(humidity: state.weatherModel.humidity),
             VisibilitySimplified(visibility: state.weatherModel.visibility),
-            const SizedBox(
-              height: 30,
-            ),
+            const SizedBox(height: 30),
             SunTimeDescription(
               time: state.weatherModel.sunrise,
               prefix: "Sunrise: ",
