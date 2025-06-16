@@ -1,13 +1,16 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+// projectimports
 import '../../../services/shared_prefs.dart';
 import '../../../weather_bloc/weather_bloc.dart';
 import '../../data_page/data_page.dart';
 
 class SearchButton extends StatelessWidget {
-
   const SearchButton({
     super.key,
     required this.searchController,
@@ -37,7 +40,10 @@ class SearchButton extends StatelessWidget {
     );
   }
 
-  Future<void> _searchPageAction(BuildContext context, GlobalKey<FormState> formKey) async {
+  Future<void> _searchPageAction(
+    BuildContext context,
+    GlobalKey<FormState> formKey,
+  ) async {
     if (formKey.currentState!.validate()) {
       final navigator = Navigator.of(context);
       final scaffoldMessenger = ScaffoldMessenger.of(context);
@@ -47,21 +53,18 @@ class SearchButton extends StatelessWidget {
         bool isSimplified = SharedPrefs.getIsSimplified() ?? false;
         navigator.push(
           MaterialPageRoute(
-            builder: (_) =>
-                BlocProvider.value(
-                  value: BlocProvider.of<WeatherBloc>(context),
-                  child: DataPage(
-                    cityName: searchController.text,
-                    isSimplified: isSimplified,
-                  ),
-                ),
+            builder: (_) => BlocProvider.value(
+              value: BlocProvider.of<WeatherBloc>(context),
+              child: DataPage(
+                cityName: searchController.text,
+                isSimplified: isSimplified,
+              ),
+            ),
           ),
         );
       } else {
         scaffoldMessenger.showSnackBar(
-          const SnackBar(
-            content: Text('No internet'),
-          ),
+          const SnackBar(content: Text('No internet')),
         );
       }
     }
