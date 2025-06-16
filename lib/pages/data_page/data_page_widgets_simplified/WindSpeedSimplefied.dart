@@ -18,11 +18,7 @@ class WindSpeedSimplefied extends StatelessWidget {
             Expanded(
               child: Text(
                 "Wind Speed: ${speed.toString()} Km/h",
-                //textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 20,
-                  //fontWeight: FontWeight.bold,
-                ),
+                style: const TextStyle(fontSize: 20),
               ),
             ),
           ],
