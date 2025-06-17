@@ -45,8 +45,6 @@ class WeatherModel {
       humidity: main['humidity'],
       visibility: json['visibility'],
       speed: json['wind']['speed'].toDouble(),
-      //speed: wind['speed']
-      // speed: double.parse((wind['speed']).toString()),
     );
   }
 }
