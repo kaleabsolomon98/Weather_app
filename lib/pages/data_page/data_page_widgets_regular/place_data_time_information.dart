@@ -1,4 +1,7 @@
+// flutter imports:
 import 'package:flutter/material.dart';
+
+// package imports
 import 'package:intl/intl.dart';
 
 class PlaceDataTimeInformation extends StatelessWidget {
@@ -14,9 +17,7 @@ class PlaceDataTimeInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: const BoxConstraints(
-        maxWidth: 400,
-      ),
+      constraints: const BoxConstraints(maxWidth: 400),
       child: Flex(
         direction: Axis.horizontal,
         children: [
