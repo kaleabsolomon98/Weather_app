@@ -1,4 +1,7 @@
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
 import 'package:intl/intl.dart';
 
 class SunTimeDescription extends StatelessWidget {
