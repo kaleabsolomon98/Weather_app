@@ -29,9 +29,8 @@ class SearchButton extends StatelessWidget {
           minimumSize: const Size(80, 50),
           backgroundColor: Colors.orangeAccent,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(30.0),
+            borderRadius: BorderRadius.circular(30),
           ),
-        ),
         child: const Text("Search"),
         onPressed: () {
           _searchPageAction(context, formKey);
