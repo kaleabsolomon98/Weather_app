@@ -1,20 +1,18 @@
+// flutter imports
 import 'package:flutter/material.dart';
+
+// package imports
 import 'package:weatherapp/pages/data_page/data_page_widgets_regular/place_data_time_information.dart';
 
 class WeatherDescriptionSimplified extends StatelessWidget {
-  const WeatherDescriptionSimplified({
-    super.key,
-    required this.description,
-  });
+  const WeatherDescriptionSimplified({super.key, required this.description});
 
   final String description;
 
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: const BoxConstraints(
-        maxWidth: 400,
-      ),
+      constraints: const BoxConstraints(maxWidth: 400),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
@@ -23,9 +21,7 @@ class WeatherDescriptionSimplified extends StatelessWidget {
               child: FittedBox(
                 child: Text(
                   description.capitalize(),
-                  style: const TextStyle(
-                    fontSize: 30,
-                  ),
+                  style: const TextStyle(fontSize: 30),
                 ),
               ),
             ),
