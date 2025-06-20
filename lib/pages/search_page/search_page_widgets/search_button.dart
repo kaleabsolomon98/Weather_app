@@ -31,10 +31,9 @@ class SearchButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-        child: const Text("Search"),
-        onPressed: () {
-          _searchPageAction(context, formKey);
-        },
+          child: const Text("Search"),
+          onPressed: () => _searchPageAction(context, formKey),
+        ),
       ),
     );
   }
