@@ -62,6 +62,7 @@ class SearchButton extends StatelessWidget {
           ),
         );
       } else {
+        // snack bar
         scaffoldMessenger.showSnackBar(
           const SnackBar(content: Text('No internet')),
         );
