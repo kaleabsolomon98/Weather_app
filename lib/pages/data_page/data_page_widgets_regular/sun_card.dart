@@ -35,7 +35,7 @@ class SunCard extends StatelessWidget {
           Expanded(
             flex: 2,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: FittedBox(
                 fit: BoxFit.fitWidth,
                 child: Text(
