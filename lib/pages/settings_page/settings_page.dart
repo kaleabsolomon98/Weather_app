@@ -34,7 +34,7 @@ class _SettingsPageState extends State<SettingsPage> {
           icon: const Icon(
             Icons.arrow_back,
             color: Colors.black,
-            size: 40,
+            size: 40.0,
           ),
         ),
       ),
