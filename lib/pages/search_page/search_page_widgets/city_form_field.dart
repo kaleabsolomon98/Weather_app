@@ -25,7 +25,7 @@ class _CityFormFieldState extends State<CityFormField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Form(
         key: _formKey,
         child: TextFormField(
